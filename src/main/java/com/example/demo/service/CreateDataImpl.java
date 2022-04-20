@@ -3,10 +3,13 @@ package com.example.demo.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.example.demo.model.Instrument;
 import com.example.demo.repository.InstrumentRepo;
-
+@Service
+@Transactional
 public class CreateDataImpl implements CreateData {
 
 	@Autowired

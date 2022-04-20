@@ -17,8 +17,8 @@ import com.example.demo.service.CreateData;
 @RequestMapping(value = "/api")
 public class InstrumentController {
 
-	@Autowired
-	CreateData data;
+	@Autowired(required=true)
+	private CreateData data;
 	
 	@PostMapping("/save")
 	public Instrument save(@RequestBody Instrument instrument) {
